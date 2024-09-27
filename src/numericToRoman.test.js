@@ -1,5 +1,5 @@
 // Importer la fonction numericToRoman
-const numericToRoman = require('./numericToRoman');
+const [numericToRoman, romanToNumeric] = require('./numericToRoman');
 
 // S'assurer que la fonction est importée correctement
 if (typeof numericToRoman !== 'function') {
@@ -52,3 +52,54 @@ test("appeler la fonction", () => {
     expect(numericToRoman(900)).toBe("CM");
 });
 
+// Vérifier que la fonction romanToNumeric est correctement importée
+if (typeof romanToNumeric !== 'function') {
+  throw new Error('romanToNumeric n\'est pas une fonction');
+}
+
+test("convertir des chiffres romains en nombres", () => {
+    // Cas de test pour convertir I en nombre
+    expect(romanToNumeric("I")).toBe(1);
+    
+    // Cas de test pour convertir V en nombre
+    expect(romanToNumeric("V")).toBe(5);
+    
+    // Cas de test pour convertir X en nombre
+    expect(romanToNumeric("X")).toBe(10);
+    
+    // Cas de test pour convertir L en nombre
+    expect(romanToNumeric("L")).toBe(50);
+    
+    // Cas de test pour convertir C en nombre
+    expect(romanToNumeric("C")).toBe(100);
+    
+    // Cas de test pour convertir D en nombre
+    expect(romanToNumeric("D")).toBe(500);
+    
+    // Cas de test pour convertir M en nombre
+    expect(romanToNumeric("M")).toBe(1000);
+    
+    // Cas de test pour convertir IV en nombre
+    expect(romanToNumeric("IV")).toBe(4);
+    
+    // Cas de test pour convertir IX en nombre
+    expect(romanToNumeric("IX")).toBe(9);
+    
+    // Cas de test pour convertir XL en nombre
+    expect(romanToNumeric("XL")).toBe(40);
+    
+    // Cas de test pour convertir XC en nombre
+    expect(romanToNumeric("XC")).toBe(90);
+    
+    // Cas de test pour convertir CD en nombre
+    expect(romanToNumeric("CD")).toBe(400);
+    
+    // Cas de test pour convertir CM en nombre
+    expect(romanToNumeric("CM")).toBe(900);
+    
+    // Cas de test pour convertir MCMLIV en nombre
+    expect(romanToNumeric("MCMLIV")).toBe(1954);
+    
+    // Cas de test pour convertir MMXXI en nombre
+    expect(romanToNumeric("MMXXI")).toBe(2021);
+});
