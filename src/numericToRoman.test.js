@@ -1,5 +1,5 @@
 // Importer la fonction numericToRoman
-const [numericToRoman, romanToNumeric] = require('./numericToRoman');
+import { numericToRoman, romanToNumeric } from './numericToRoman';
 
 // S'assurer que la fonction est importée correctement
 if (typeof numericToRoman !== 'function') {

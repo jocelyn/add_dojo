@@ -3,4 +3,4 @@ function sum(a, b) {
     // Add the two input parameters and return the result
     return a + b;
 }
-module.exports = sum;
+export default sum;

@@ -65,4 +65,4 @@ function romanToNumeric(roman) {
     return result;
 }
 
-module.exports = [ numericToRoman, romanToNumeric];
+export { numericToRoman as numericToRoman, romanToNumeric as romanToNumeric };

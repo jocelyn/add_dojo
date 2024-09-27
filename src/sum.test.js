@@ -1,4 +1,5 @@
-const sum = require('./sum'); // Importer la fonction sum
+import sum from './sum'; // Importer la fonction sum
+
 // Vérifier que la fonction sum est correctement importée
 if (typeof sum !== 'function') {
   throw new Error('sum n\'est pas une fonction');
